@@ -22,6 +22,7 @@
 					:collapse="isCollapse"
 					:collapse-transition="false"
           :router="true"
+					:default-active="index"
 				>
 					<!-- 一级菜单 -->
 					<el-submenu
@@ -41,6 +42,7 @@
 							:index="'/' + subItem.path"
 							v-for="subItem of item.children"
 							:key="subItem.id"
+							@click="saveNavState('/' + subItem.path)"
 						>
 							<template slot="title">
 								<!-- 二级菜单的图标 -->
@@ -74,10 +76,13 @@ export default {
 			},
 			// 默认情况下不折叠
 			isCollapse: false,
+			index: ''
 		};
 	},
 	created() {
 		this.getMenuList();
+		// 组件初始化后直接对index进行赋值
+		this.index = window.sessionStorage.getItem('activePath')
 	},
 	methods: {
 		handleClick() {
@@ -100,6 +105,11 @@ export default {
 		toggleCollapse() {
 			this.isCollapse = !this.isCollapse;
 		},
+		// 点击二级菜单之后，将index值存储到sessionStorage中
+		saveNavState(index) {
+			window.sessionStorage.setItem('activePath', index)
+			this.index = index
+		}
 	},
 };
 </script>
