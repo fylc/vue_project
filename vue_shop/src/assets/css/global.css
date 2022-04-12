@@ -13,7 +13,7 @@ body,
 }
 
 .el-card {
-	box-shadow: 0 1px 1px rgba(0, 0, 0, .15) !important;
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15) !important;
 }
 
 .el-table {
@@ -23,4 +23,9 @@ body,
 
 .el-pagination {
 	margin-top: 15px;
+}
+
+/* 解决Cate.vue中使用级联选择器位置跑偏的问题 */
+.el-cascader-panel {
+	height: 300px;
 }

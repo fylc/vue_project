@@ -3,6 +3,8 @@ import App from './App.vue';
 import router from './router';
 import './plugins/element.js';
 import './assets/css/global.css';
+// 导入树形table表格插件
+import TreeTable from 'vue-table-with-tree-grid'
 
 Vue.config.productionTip = false;
 // 导入字体图标
@@ -20,6 +22,9 @@ axios.interceptors.request.use(config => {
 	return config;
 })
 Vue.prototype.$http = axios;
+
+// 将TreeTable组件进行全局注册
+Vue.component('tree-table', TreeTable)
 
 new Vue({
 	router,
