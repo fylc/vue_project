@@ -96,7 +96,7 @@ export default {
 			const { data: result } = await this.$http.get('menus');
 			// 如果失败直接消息提示
 			if (result.meta.status !== 200)
-				return this.$message.error(res.meta.msg);
+				return this.$message.error(result.meta.msg);
 			// 如果成功直接将菜单数据赋值给menuList
 			this.menuList = result.data;
 			console.log(result);
