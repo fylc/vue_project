@@ -1,17 +1,64 @@
 <!DOCTYPE html>
 <html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+		<title><%= htmlWebpackPlugin.options.title %></title>
+		<!-- 进度条 -->
+		<link
+			href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/nprogress/0.2.0/nprogress.min.js"></script>
+
+		<!-- 富文本编辑器 的样式表文件 -->
+		<!-- <link
+			href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/quill/2.0.0-dev.4/quill.core.min.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/quill/2.0.0-dev.4/quill.snow.css"
+			type="text/css"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/quill/2.0.0-dev.4/quill.bubble.min.css"
+			type="text/css"
+			rel="stylesheet"
+		/> -->
+
+		<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.min.js"></script>
+		<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue-router/3.5.1/vue-router.min.js"></script>
+		<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/axios/0.26.0/axios.min.js"></script>
+		<script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/lodash.js/4.17.21/lodash.min.js"></script>
+		<script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/echarts/5.3.0-rc.1/echarts.min.js"></script>
+
+		<!-- 富文本编辑器的 js 文件 -->
+		<!-- <script src="https://cdn.staticfile.org/quill/1.3.4/quill.min.js"></script> -->
+		<!-- <script src="https://cdn.jsdelivr.net/npm/vue-quill-editor@3.0.4/dist/vue-quill-editor.js"></script>
+		<script
+			src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/quill/2.0.0-dev.4/quill.min.js"
+			type="application/javascript"
+		></script> -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+		/>
+		<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+	</head>
+	<body>
+		<noscript>
+			<strong
+				>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't
+				work properly without JavaScript enabled. Please enable it to
+				continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
 </html>

@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import * as echarts from 'echarts';
+// import * as echarts from 'echarts';
 export default {
 	// mounted 钩子函数 -- 此时页面中的元素已经被渲染完毕了
 	mounted() {

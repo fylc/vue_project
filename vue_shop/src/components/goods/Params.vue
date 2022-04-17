@@ -51,7 +51,7 @@
 					<el-table :data="manyTableData" border stripe>
 						<!-- 展开行 -->
 						<el-table-column type="expand">
-							<template slot-scope="scope">
+							<template v-slot="scope">
 								<!-- 循环渲染Tag标签 -->
 								<el-tag
 									v-for="(item, i) in scope.row.attr_vals"
@@ -90,7 +90,7 @@
 							prop="attr_name"
 						></el-table-column>
 						<el-table-column label="操作">
-							<template slot-scope="scope">
+							<template v-slot="scope">
 								<el-button
 									size="mini"
 									type="primary"
@@ -123,7 +123,7 @@
 					<el-table :data="onlyTableData" border stripe>
 						<!-- 展开行 -->
 						<el-table-column type="expand">
-							<template slot-scope="scope">
+							<template v-slot="scope">
 								<!-- 循环渲染Tag标签 -->
 								<el-tag
 									v-for="(item, i) in scope.row.attr_vals"
@@ -162,7 +162,7 @@
 							prop="attr_name"
 						></el-table-column>
 						<el-table-column label="操作">
-							<template slot-scope="scope">
+							<template v-slot="scope">
 								<el-button
 									size="mini"
 									type="primary"

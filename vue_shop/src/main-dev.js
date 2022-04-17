@@ -1,8 +1,10 @@
 import Vue from 'vue';
 import App from './App.vue';
-import router from './router';
+import router from './router/index.js';
 import './plugins/element.js';
 import './assets/css/global.css';
+import * as NProgress from 'nprogress';
+import 'nprogress/nprogress.css';
 
 // editor 编辑插件
 import VueQuillEditor from 'vue-quill-editor';
@@ -25,10 +27,19 @@ import axios from 'axios';
 // 配置请求的根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/';
 // 设置请求拦截器
+// 在request进度条中展示进度条
 axios.interceptors.request.use((config) => {
 	// console.log(config);
+	NProgress.start();
 	// 将会话存储中的token数据取出，挂载到请求头中的Authorization上，目的是为了进行权限的验证
 	config.headers.Authorization = window.sessionStorage.getItem('token');
+	return config;
+});
+
+// 在response中隐藏进度条
+axios.interceptors.response.use((config) => {
+	NProgress.done();
+
 	return config;
 });
 Vue.prototype.$http = axios;
